@@ -1,0 +1,32 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+@import '~vuetify/src/styles/styles.sass';
+
+$main-color: #e5e4df;
+$sec-color: #1a1917;
+
+$material-dark: map-merge($material-dark, (
+  'background': var(--v-background-base, map-get($material-dark, 'background'))
+));
+
+
+$material-light: map-merge($material-light, (
+  'background': var(--v-background-base, map-get($material-light, 'background'))
+));
+
+$transition: map-deep-merge(
+  (
+    'fast-out-slow-in': 1s
+  ),
+    $transition
+);
+
+$maxSmall: "(max-width: 576px)";
+$maxMobile: "(max-width: 767px)";
+$maxMedium: "(max-width: 991px)";
+$minMobile: "(min-width: 768px)";
+$minMedium: "(min-width: 992px)";
+$minLarge: "(min-width: 1200px)";
+

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+h1,h2,h3,h4,h5,h6,p,a,div,small,button,span {
+    font-family: 'Comfortaa', cursive;
+}
+
+h2 {
+    font-size: 1.5rem;
+    min-width: 300px;
+}
+
+* {
+    text-transform: capitalize;
+}
+
+.v-btn__content {
+    opacity: 1 !important;
+}
+
+.v-application {
+    transition: all 0.4s ease !important;
+}
+
+.v-main {
+    transition: inherit !important;
+}
+
+.container{ 
+    max-width: unset !important;
+    width: 90% !important;
+}
+
+.underline {
+    box-shadow: inset 0 -0.0625em 0 rgb(229 228 223 / 50%);
+    transition-property: box-shadow;
+    transition-duration: 0.25s, 0.25s;
+    transition-timing-function: ease, ease;
+    &:hover {
+        box-shadow: inset 0 -0.0625em 0 #fff;
+    }
+}
+
+.dark {
+    .underline {
+        box-shadow: inset 0 -0.0625em 0 rgb(26 25 23 / 50%);
+    }
+    div:hover span,
+    .underline:hover {
+        box-shadow: inset 0 -0.0625em 0 #333;
+    }
+}
+
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
+}
+.page-enter {
+    transform: translateX(30px);
+    opacity: 0;
+}
+.page-leave-to {
+    transform: translateX(-30px);
+    opacity: 0;
+}
+

@@ -1,18 +1,29 @@
 <template lang="pug">
-div    
+div
     HeaderIntro
     v-container
         section.exe-wrapper
             .experience.d-lg-flex.align-baseline
                 h2.mb-5 experience
                 ul.wrapper
-                    li #[v-icon mdi-check-circle] #[p +1 year Freelance Front end Developer]
+                    li #[v-icon mdi-check-circle] #[p ( 2020 - 2021 ) +1 year remote and freelancer Front end Developer]
                     li #[v-icon mdi-check-circle] #[p Created responsive web applications Using JavaScript, HTML, and CSS, bootstrap, vue.js, nuxt.js, vuetify ,etc .]
                     li #[v-icon mdi-check-circle] #[p Conceived and built optimized landing pages in HTML5 and CSS3, Vue.js includingintegration and cross-browser compatibility, to support marketing]
                     li #[v-icon mdi-check-circle] #[p Collaborated with in-house web designers to create sleek and innovative UI design.]
                     li #[v-icon mdi-check-circle] #[p Accurately translate user and business needs into functional frontend code Job Requirements.]
                     li #[v-icon mdi-check-circle] #[p Implement static web user interfaces based on the provided visuals, combining them with front-end dynamic presentation technologies (Javascript frameworks).]
                     li #[v-icon mdi-check-circle] #[p Assure that all user input is validated before submitting to back-end.]
+                    .exe-wrapper
+            .experience.d-lg-flex.align-baseline
+                h2.mb-5 experience
+                ul.wrapper
+                    li #[v-icon mdi-check-circle] #[p ( Jan 2023 - present ) working as full time Vuejs developer at #[a(href="https://elryad.com/ar/" target="_blank" class="underline") Elryad company for web design ] ]
+                    li #[v-icon mdi-check-circle] #[p develping web apps for Learning managment systems using vue.js, nuxt.js, vuetify ,etc .]
+                    li #[v-icon mdi-check-circle] #[p Collaborate with backend developers and and integrate REST apis in the wep apps]
+                    li #[v-icon mdi-check-circle] #[p Implement, debug, configure, build, deploy and test applications. ]
+                    li #[v-icon mdi-check-circle] #[p Full access to the clinets meetings and Accurately translate user and business needs into functional frontend code Job Requirements.]
+                    li #[v-icon mdi-check-circle] #[p Develop and maintain web and cross-platform applications using HTML, CSS, JavaScript and related technologies.]
+                    li #[v-icon mdi-check-circle] #[p Implement clean, modern, smooth animations and transitions that provide an excellent user experience]
                     .exe-wrapper
 
             .qualifications.d-lg-flex.align-baseline
@@ -112,6 +123,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.d-block {
+    display: block;
+}
 section {
     padding: 100px 0;
 }
@@ -134,6 +148,11 @@ section.exe-wrapper {
                     margin: 0;
                     margin-left: 10px;
                 }
+                a {
+                    text-decoration: none;
+                    margin: 0 5px;
+                    color: inherit;
+                }
             }
         }
         @media #{$minLarge} {
@@ -151,9 +170,9 @@ section.techno {
     .wrapper {
         margin: auto;
         font-size: 30px;
-        box-shadow: 0px 0px 1px;
+        border: 1px solid #ffffff47;
         border-radius: 24px;
-        transition: box-shadow 1s ease;
+        transition: all 1s ease;
         height: 180px;
         cursor: pointer;
         display: flex;
@@ -166,7 +185,7 @@ section.techno {
             font-size: 30px !important;
         }
         &:hover {
-            box-shadow: 0px 0px 3px;
+            border-color: #fff;
         }
     }
 }

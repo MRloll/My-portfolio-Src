@@ -13,6 +13,7 @@
     "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
   },
   "dependencies": {
+    "@mdi/font": "^7.2.96",
     "animate.css": "^4.1.1",
     "autoprefixer": "^9.8.8",
     "core-js": "^3.25.3",

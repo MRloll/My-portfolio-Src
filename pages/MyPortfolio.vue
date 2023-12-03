@@ -71,6 +71,13 @@ export default {
                     github: null,
                     preview: "https://walid.azq1.com/meem/",
                 },
+
+                {
+                    src: require("@/assets/imgs/live-game.png"),
+                    name: "Live game",
+                    github: null,
+                    preview: "https://mrloll.github.io/live-game/",
+                },
                 {
                     src: require("@/assets/imgs/vida.png"),
                     name: "Vida LMS",

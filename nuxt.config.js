@@ -36,6 +36,9 @@ export default {
         link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
     // loading :"~/components/LoadingIndicator.vue",
+    router: {
+        base: "/walid-salah/",
+    },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: ["~/assets/main.scss", "@mdi/font/css/materialdesignicons.min.css"],

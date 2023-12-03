@@ -3,19 +3,46 @@ div
     v-container
         NavBar
         .my-prtofolio.text-center
-            h2  Welcome to my Portfolio
+            h2 Welcome to my Portfolio
             .cards.row.align-content-center(dir="rtl")
-                v-col.card(v-for="website of websites" :key="website.name" :alt="website.name" lg="3" md="4" sm="6" cols="12")
-                    .img-wrapper #[v-img(:src='`${website.src}`')]
-                    .img-info.mt-5.d-flex.justify-space-around
-                        v-btn(:href="website.github" target="_blank" rounded )
-                            v-icon.mr-3 mdi-github
-                            | GitHub
-                        v-btn(:href="website.preview" target="_blank" rounded)
-                            v-icon.mr-3 mdi-eye-arrow-right
-                            | Preview
+                v-col.card(
+                    v-for="website of websites",
+                    :key="website.name",
+                    :alt="website.name",
+                    lg="3",
+                    md="4",
+                    sm="6",
+                    cols="12"
+                )
+                    a(:href="website.preview", target="_blank")
+                        .img-wrapper
+                            v-img(:src="`${website.src}`")
+                                template(v-slot:placeholder)
+                                    v-row.fill-height.ma-0(
+                                        align="center",
+                                        justify="center"
+                                    )
+                                        v-progress-circular(
+                                            indeterminate,
+                                            color="white"
+                                        )
+                        .img-info.mt-5.d-flex.justify-space-around
+                            v-btn(
+                                :href="website.github",
+                                target="_blank",
+                                rounded,
+                                v-if="website.github"
+                            )
+                                v-icon.mr-3 mdi-github
+                                | GitHub
+                            v-btn(
+                                :href="website.preview",
+                                target="_blank",
+                                rounded
+                            )
+                                v-icon.mr-3 mdi-eye-arrow-right
+                                | Preview
         ContactMe
-
 </template>
 
 <script>
@@ -34,23 +61,34 @@ export default {
                 {
                     src: require("@/assets/imgs/zakaa.png"),
                     name: "Zakaa wep app",
-                    github: "",
-                    preview: "https://walid.azq1.com/zakaa/",
+                    github: null,
+                    preview: "https://hdiit.edu.sa/zakaa/",
                 },
 
                 {
                     src: require("@/assets/imgs/meem.png"),
                     name: "Meem wep app",
-                    github: "",
+                    github: null,
                     preview: "https://walid.azq1.com/meem/",
+                },
+                {
+                    src: require("@/assets/imgs/vida.png"),
+                    name: "Vida LMS",
+                    github: null,
+                    preview: "https://vida-ksa.com/",
                 },
                 {
                     src: require("@/assets/imgs/adam.png"),
                     name: "Adaam wep app",
-                    github: "",
+                    github: null,
                     preview: "https://walid.azq1.com/adam/",
                 },
-
+                {
+                    src: require("@/assets/imgs/stardom.png"),
+                    name: "Stardom turkish university",
+                    github: null,
+                    preview: "https://stardomuniversity.org/en/",
+                },
                 {
                     src: require("@/assets/imgs/basic-app.png"),
                     name: "basic-app",
@@ -112,6 +150,9 @@ export default {
     }
     .cards {
         .card {
+            a {
+                text-decoration: none;
+            }
             width: 400px;
             height: 579px;
             cursor: pointer;

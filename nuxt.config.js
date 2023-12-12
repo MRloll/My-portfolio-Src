@@ -81,7 +81,9 @@ export default {
             },
         },
     },
-
+    generate: {
+        fallback: true,
+    },
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
         postcss: null,

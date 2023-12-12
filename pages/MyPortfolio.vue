@@ -16,7 +16,7 @@ div
                 )
                     a(:href="website.preview", target="_blank")
                         .img-wrapper
-                            v-img(:src="`${website.src}`")
+                            v-img(:src="`${website.src}`" cover height="100%")
                                 template(v-slot:placeholder)
                                     v-row.fill-height.ma-0(
                                         align="center",
